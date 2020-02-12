@@ -14,29 +14,20 @@
 <?php
     include "includes/header.php";
 
-     $Weight = 180;
+     $Wt = 180;
      $FIRST_NAME = "Jacobi";
      $LAST_NAME = "Williams";
      $Age = 25;
-    function PoundsToKG()
+    function PoundsToKG($Weight)
      {
-    return global $Weight * (1 /2.2);
+    return $Wt * (1 /2.2);
     }
-    $KGWeight = function PoundsToKG();
-    echo $KGWeight
-    // Alternative would be 
-    // function PoundsToKg($Weight) 
-    // {
-    // $Weight = 180;
-    // return $Weight * (1/2.2);}
-    // $KGWeight = function PoundsToKG ($Weight);
-    // echo $KGWeight;
-    // "For the locally defined variable?"//
+    $KGWeight = PoundsToKG($Weight);
 ?>
 <body>
 <p>Good morning, ladies and gentlemen!</p>
-<p>My name is <?php echo "$FIRST_NAME", echo "$LAST_NAME" ?>
-<p>I am <?php echo "$Age" ?> years old. I weigh <?php echo "$Weight" ?> pounds, which is <?php echo "$KGWeight" ?> kg!</p>
+<p>My name is <?php echo "$FIRST_NAME" ?> <?php echo "$LAST_NAME" ?>
+<p>I am <?php echo "$Age" ?> years old. I weigh <?php echo "$Wt" ?> pounds, which is <?php echo "$KGWeight" ?> kg!</p>
 
 </body>
 <?php
